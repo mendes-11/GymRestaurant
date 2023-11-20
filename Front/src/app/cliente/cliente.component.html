@@ -1,0 +1,13 @@
+<div class="body">
+    <app-nav></app-nav>
+    
+    <div style="display: flex; justify-content: space-around;">
+        <mat-card *ngFor="let objeto of objetos" class="card">
+          <img mat-card-image class="image" [src]="objeto.imagemSrc" alt="{{ objeto.alt }}">
+          <mat-card-content>
+            <p>{{ objeto.nome }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      
+</div>

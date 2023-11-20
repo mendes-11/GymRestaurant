@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Fjalla+One&display=swap');
+
+.navbar {
+    flex: 1 1 auto;
+    background: linear-gradient(0deg, rgba(34,195,163,1) 32%, rgba(34,171,197,1) 100%);
+    font-family: 'Bitter', serif;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 25px;
+  }
+  

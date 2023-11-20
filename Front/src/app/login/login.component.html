@@ -1,0 +1,25 @@
+<div class="body">
+    <mat-card class="card">
+        <p class="title">Gym Restaurant</p>
+
+        <form class="form">
+            
+            <mat-form-field class="example-full-width">
+                <mat-label>Login</mat-label>
+                <input matInput placeholder="Ex. Usuario123" name="login">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Senha</mat-label>
+                <input [type]="hide ? 'password' : 'text'" matInput placeholder="Ex. Senha123" name="senha" [(ngModel)]="password">
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </mat-form-field>
+        </form>
+
+        <section>
+            <div class="button">
+                <button mat-raised-button color="accent">Login</button>
+            </div>
+        </section>
+    </mat-card>
+</div>
