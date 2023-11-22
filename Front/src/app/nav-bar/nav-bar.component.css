@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Fjalla+One&display=swap');
+
+
+.navbar{
+    background-color: #F8F4E3;
+}
+.navbar-brand{
+    font-family: 'Bitter', serif;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 25px;
+}
+
+.offcanvas-title{
+    font-family: 'Bitter', serif;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 28px;
+}
+.offcanvas{
+    background-color: #F8F4E3
+
+}
+
+.offcanvas-body{
+    background-color: #D5D0CD;
+    font-family: 'Bitter', serif;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 15px;
+
+}
+
+.logo{
+    width: 40px;
+}
+
+
+.dropdown-menu{
+    background-color: #e6deda;
+    font-family: 'Bitter', serif;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 15px;
+
+}

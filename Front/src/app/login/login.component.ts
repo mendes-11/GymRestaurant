@@ -10,6 +10,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { NavComponent } from '../nav/nav.component';
 
 @Component({
   selector: 'app-login',
@@ -27,6 +28,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
           MatInputModule, 
           MatCardModule,
           MatCheckboxModule,
+          NavComponent,
         ],
 })
 export class LoginComponent {

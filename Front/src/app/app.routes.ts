@@ -8,3 +8,20 @@ export const routes: Routes = [
     {path: '', component: LoginComponent},
     { path: 'home', component: ClienteComponent}
 ];
+
+
+
+/*
+TELAS
+
+Cliente:
+
+login
+home: Produtos, comprar, carrinho(continuar comprando), quantidade, cupons/ dropdown finalizar pedido.
+promoção children da home...
+
+
+ADM:
+
+
+*/
