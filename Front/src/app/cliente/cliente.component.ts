@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { NavComponent } from '../nav/nav.component';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
 import {MatCardModule} from '@angular/material/card';
+import { FoodCardComponent } from '../food-card/food-card.component';
+import { CarouselComponent } from '../carousel/carousel.component';
 
 
 @Component({
@@ -16,23 +18,28 @@ import {MatCardModule} from '@angular/material/card';
     NavComponent,
     MatCardModule,
     NavBarComponent,
+    FoodCardComponent,
+    CarouselComponent
   ],
 })
 export class ClienteComponent {
 
-  objetos = [
-    { nome: 'Tapioca', imagemSrc: '../assets/tapioca.jpeg', alt: 'Descrição da imagem 1' },
-    { nome: 'Tapioca', imagemSrc: '../assets/tapioca.jpeg', alt: 'Descrição da imagem 1' },
-    { nome: 'Tapioca', imagemSrc: '../assets/tapioca.jpeg', alt: 'Descrição da imagem 1' },
-    { nome: 'Tapioca', imagemSrc: '../assets/tapioca.jpeg', alt: 'Descrição da imagem 1' },
-    { nome: 'Tapioca', imagemSrc: '../assets/tapioca.jpeg', alt: 'Descrição da imagem 1' },
+  menuItems = [
+    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagem 1', price: 10.99 },
+    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagem 1', price: 10.99 },
+    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagem 1', price: 10.99 },
+    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagem 1', price: 10.99 },
+    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagem 1', price: 10.99 },
+    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagem 1', price: 10.99 },
+    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagem 1', price: 10.99 },
+    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagem 1', price: 10.99 },
 
-    { nome: 'Tapioca', imagemSrc: '../assets/tapioca.jpeg', alt: 'Descrição da imagem 1' },
-    { nome: 'Tapioca', imagemSrc: '../assets/tapioca.jpeg', alt: 'Descrição da imagem 1' },
-
-
-
-    // Adicione mais objetos conforme necessário
+    
   ];
+  
+
+  buyFood(food: any) {
+    console.log(`Você comprou: ${food.nome}`);
+  }
 
 }

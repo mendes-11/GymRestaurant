@@ -1,28 +1,37 @@
-<app-nav></app-nav>
 <div class="body">
+  <app-nav></app-nav>
+  <div class="centralizar">
     <mat-card class="card">
-        <p class="title">Login</p>
+      <p class="title">Login</p>
 
-        <form class="form">
-            
-            <mat-form-field class="example-full-width">
-                <mat-label>Login</mat-label>
-                <input matInput placeholder="Ex. Usuario123" name="login">
-            </mat-form-field>
+      <form class="form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Login</mat-label>
+          <input matInput placeholder="Ex. Usuario123" name="login" />
+        </mat-form-field>
 
-            <mat-form-field class="example-full-width">
-                <mat-label>Senha</mat-label>
-                <input [type]="hide ? 'password' : 'text'" matInput placeholder="Ex. Senha123" name="senha" [(ngModel)]="password">
-                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-            </mat-form-field>
-        </form>
-        <section class="button">
-            <div>
-                <button type="button" class="btn btn-primary">Login</button>
-            </div>
-            <div>
-                <button type="button" class="btn btn-primary">Cadastrar</button>
-            </div>
-        </section>
+        <mat-form-field class="example-full-width">
+          <mat-label>Senha</mat-label>
+          <input
+            [type]="hide ? 'password' : 'text'"
+            matInput
+            placeholder="Ex. Senha123"
+            name="senha"
+            [(ngModel)]="password"
+          />
+          <mat-icon matSuffix (click)="hide = !hide">{{
+            hide ? "visibility_off" : "visibility"
+          }}</mat-icon>
+        </mat-form-field>
+      </form>
+      <section>
+        <div class="button">
+          <button class="toggle-button" onclick="">Login</button>
+        </div>
+        <div class="button">
+          <button class="toggle-button" onclick="">Cadastrar</button>
+        </div>
+      </section>
     </mat-card>
+  </div>
 </div>
