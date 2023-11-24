@@ -1,0 +1,63 @@
+<div class="body">
+    <app-nav></app-nav>
+    <div class="centralizar">
+      <mat-card class="card">
+        <p class="title">Cadastro</p>
+  
+        <form class="form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Nome</mat-label>
+            <input matInput placeholder="Ex. Usuario123" name="nome" />
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Ex. gymRestaurant@email.com" name="email" />
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>CPF</mat-label>
+            <input matInput placeholder="Ex. 000.000.000-00" name="CPF" />
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <mat-label>Senha</mat-label>
+            <input
+              [type]="hide ? 'password' : 'text'"
+              matInput
+              placeholder="Ex. Senha123"
+              name="senha1"
+              [(ngModel)]="password"
+            />
+            <mat-icon matSuffix (click)="hide = !hide">{{
+              hide ? "visibility_off" : "visibility"
+            }}</mat-icon>
+          </mat-form-field>
+
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Confimar Senha</mat-label>
+            <input
+              [type]="hide2 ? 'password' : 'text'"
+              matInput
+              placeholder="Ex. Senha123"
+              name="senha2"
+              [(ngModel)]="password2"
+            />
+            <mat-icon matSuffix (click)="hide2 = !hide2">{{
+              hide2 ? "visibility_off" : "visibility"
+            }}</mat-icon>
+          </mat-form-field>
+        </form>
+        <section>
+          <div class="button">
+            <button class="toggle-button" onclick="">Cadastrar</button>
+          </div>
+          <div class="button">
+            <button class="toggle-button" onclick="">Voltar</button>
+          </div>
+        </section>
+      </mat-card>
+    </div>
+  </div>
+  

@@ -25,16 +25,15 @@ import { CarouselComponent } from '../carousel/carousel.component';
 export class ClienteComponent {
 
   menuItems = [
-    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagem 1', price: 10.99 },
-    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagem 1', price: 10.99 },
-    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagem 1', price: 10.99 },
-    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagem 1', price: 10.99 },
-    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagem 1', price: 10.99 },
-    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagem 1', price: 10.99 },
-    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagem 1', price: 10.99 },
-    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagem 1', price: 10.99 },
+    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagem 1 imagemda imagemda imagemda imagem 1', price: 10.99 },
+    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagem 1 imagemda imagemda imagemda imagem 1', price: 10.99 },
+    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagem 1 imagemda imagemda imagemda imagem 1', price: 10.99 },
+    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagem 1 imagemda imagemda imagemda imagem 1', price: 10.99 },
+    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagem 1 imagemda imagemda imagemda imagem 1', price: 10.99 },
+    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagem 1 imagemda imagemda imagemda imagem 1', price: 10.99 },
+    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagem 1 imagemda imagemda imagemda imagem 1', price: 10.99 },
+    { name: 'Tapioca', imageUrl: '../assets/tapioca.jpeg', description: 'Descrição da imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagemda imagem 1 imagemda imagemda imagemda imagem 1', price: 10.99 },
 
-    
   ];
   
 

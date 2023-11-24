@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Fjalla+One&display=swap');
+
 .card {
     width: 18rem;
     margin-bottom: 20px;
+    font-family: 'Bitter', serif;
+    font-family: 'Fjalla One', sans-serif;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
-  
-  .card-img-top {
-    /* max-height: 200px; */
-    /* object-fit: cover; */
+
+  .card-title{
+    font-family: 'Bitter', serif;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
   }
   

@@ -1,6 +1,9 @@
-.body {
+body {
     background-color: #D4CDC3;
+}
 
-
-
+:root {
+    --mdc-filled-text-field-focus-active-indicator-color: #8FB996;
+    --mdc-filled-text-field-caret-color: #8FB996;
+    --mdc-filled-text-field-focus-label-text-color: #8FB996;   
 }

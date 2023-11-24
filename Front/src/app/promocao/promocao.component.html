@@ -1,0 +1,14 @@
+<div class="body">
+  <app-nav-bar></app-nav-bar>
+
+  <div class="cards-body">
+    <div class="cards-container">
+      <div *ngFor="let food of promocao" class="card-wrapper">
+        <app-food-card
+          [food]="food"
+          (buyClickedEvent)="buyFood(food)"
+        ></app-food-card>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,12 +1,20 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { ClienteComponent } from './cliente/cliente.component';
+import { PromocaoComponent } from './promocao/promocao.component';
+import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.component';
+import { CuponsComponent } from './cupons/cupons.component';
+import { AdmComponent } from './adm/adm.component';
 
 
 
 export const routes: Routes = [
-    {path: '', component: LoginComponent},
-    { path: 'home', component: ClienteComponent}
+    { path: '', component: LoginComponent },
+    { path: 'home', component: ClienteComponent },
+    { path: 'promocao', component: PromocaoComponent },
+    { path: 'cadastro', component: CadastroClienteComponent },
+    { path: 'cupom', component: CuponsComponent },
+    { path: 'adm', component: AdmComponent },
 ];
 
 
