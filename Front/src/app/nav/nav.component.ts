@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   selector: 'app-nav',
   standalone: true,
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css'], // Corrigido aqui
+  styleUrls: ['./nav.component.css'],
   imports: [
     CommonModule,
     MatIconModule,
@@ -21,5 +21,10 @@ import { Router } from '@angular/router';
 })
 
 export class NavComponent {
+  constructor(private router: Router) {}
+
+  get isAdmPage(): boolean {
+    return this.router.url === '/adm';
+  }
 
 }

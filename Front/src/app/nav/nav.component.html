@@ -1,3 +1,16 @@
 <mat-toolbar class="navbar">
-    <span>Gym Restaurant</span>
-</mat-toolbar>
+    <div class="toolbar-content">
+      <span>Gym Restaurant</span>
+      <ng-container *ngIf="isAdmPage">
+        <div class="admin-items">
+          <!-- <span class="adm">Gerenciamento</span> -->
+          <span class="adm">Totem</span>
+          <span class="adm">Pedidos</span>
+        </div>
+        <div class="logout">
+            <span >Sair</span>
+        </div>
+      </ng-container>
+    </div>
+  </mat-toolbar>
+  

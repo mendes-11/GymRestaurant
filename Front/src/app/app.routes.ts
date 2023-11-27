@@ -5,6 +5,7 @@ import { PromocaoComponent } from './promocao/promocao.component';
 import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.component';
 import { CuponsComponent } from './cupons/cupons.component';
 import { AdmComponent } from './adm/adm.component';
+import { TotemComponent } from './totem/totem.component';
 
 
 
@@ -15,6 +16,7 @@ export const routes: Routes = [
     { path: 'cadastro', component: CadastroClienteComponent },
     { path: 'cupom', component: CuponsComponent },
     { path: 'adm', component: AdmComponent },
+    { path: 'totem', component: TotemComponent },
 ];
 
 

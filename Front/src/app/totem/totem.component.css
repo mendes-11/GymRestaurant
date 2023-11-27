@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Fjalla+One&display=swap');
+
+
+
+.centralizar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+}
+
+.card {
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.title {
+    font-family: 'Bitter', serif;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 40px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+
+
+.example-full-width {
+    width: 80%;
+    margin-left: 11%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Bitter', serif;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.mat-label{
+    font-family: 'Bitter', serif;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.toggle-button {
+    font-family: 'Bitter', serif;
+    font-family: 'Fjalla One', sans-serif;
+    display: flex;
+    justify-content: center;
+    width: 150px; 
+    height: 40px; 
+    background-color: #709775; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px auto;
+    line-height: 40px;
+}
+
+
+.toggle-button:hover {
+background-color:#8FB996; 
+
+}
+
+@media screen and (max-width: 300px) {
+    .button {
+        
+        font-size: 14px; 
+        padding: 8px;    
+    }
+}

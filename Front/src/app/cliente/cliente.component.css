@@ -1,3 +1,6 @@
+.backgroundCarousel{
+    background: linear-gradient(180deg, rgba(180,176,159,1) 0%, rgba(212,205,195,1) 100%);
+}
 .cards-body {
     display: flex;
     justify-content: center;
