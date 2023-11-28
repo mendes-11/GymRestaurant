@@ -1,6 +1,11 @@
-
+using Back.Model;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+
+builder.Services.AddScoped<GymRestaurantContext>();
+
 
 
 builder.Services.AddControllers();

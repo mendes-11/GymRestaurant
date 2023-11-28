@@ -20,4 +20,6 @@ public partial class Usuario
     public int? ImagemId { get; set; }
 
     public virtual Imagem? Imagem { get; set; }
+
+    public virtual ICollection<Post> Posts { get; } = new List<Post>();
 }
