@@ -10,33 +10,33 @@ using Model;
 public class UserService : IUserService
 {
     GymRestaurantContext ctx;
-    public UserService(GymRestaurantContext ctx)
-        => this.ctx = ctx;
+    ISecurityService security;
+    public UserService(GymRestaurantContext ctx, ISecurityService security)
+    {
+        this.ctx = ctx;
+        this.security = security;
+    }
     public async Task Create(UserData data)
     {
         Usuario usuario = new Usuario();
+        var salt = await security.GenerateSalt();
+
         usuario.Cpf = data.CPF;
-        usuario.Senha = data.Password;
-        usuario.Salt = "????";
+        usuario.Senha = await security.HashPassword(
+            data.Password, salt
+        );
+        // usuario.IsAdm = data.isAdm;
+        usuario.Salt = salt;
 
         this.ctx.Add(usuario);
         await this.ctx.SaveChangesAsync();
     }
-
-
-
     public async Task<Usuario> GetByLogin(string login)
     {
         var query = 
             from u in this.ctx.Usuarios
             where u.Cpf == login
             select u;
-
         return await query.FirstOrDefaultAsync();
-    }
-
-    Task<Usuario> IUserService.GetByLogin(string login)
-    {
-        throw new NotImplementedException();
     }
 }
