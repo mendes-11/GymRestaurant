@@ -17,8 +17,6 @@ public partial class GymRestaurantContext : DbContext
 
     public virtual DbSet<Imagem> Imagems { get; set; }
 
-    public virtual DbSet<Post> Posts { get; set; }
-
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -28,47 +26,25 @@ public partial class GymRestaurantContext : DbContext
     {
         modelBuilder.Entity<Imagem>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Imagem__3214EC2760F4A9C3");
+            entity.HasKey(e => e.Id).HasName("PK__Imagem__3214EC2790520CC8");
 
             entity.ToTable("Imagem");
 
             entity.Property(e => e.Id).HasColumnName("ID");
         });
 
-        modelBuilder.Entity<Post>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__Post__3214EC27BFE51383");
-
-            entity.ToTable("Post");
-
-            entity.Property(e => e.Id).HasColumnName("ID");
-            entity.Property(e => e.ImagemId).HasColumnName("ImagemID");
-            entity.Property(e => e.UsuarioId).HasColumnName("UsuarioID");
-
-            entity.HasOne(d => d.Imagem).WithMany(p => p.Posts)
-                .HasForeignKey(d => d.ImagemId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Post__ImagemID__3D5E1FD2");
-
-            entity.HasOne(d => d.Usuario).WithMany(p => p.Posts)
-                .HasForeignKey(d => d.UsuarioId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Post__UsuarioID__3C69FB99");
-        });
-
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Usuario__3214EC27A6ED6C83");
+            entity.HasKey(e => e.Id).HasName("PK__Usuario__3214EC27A2BEB642");
 
             entity.ToTable("Usuario");
 
             entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Cpf)
                 .HasMaxLength(11)
-                .IsUnicode(false)
-                .HasColumnName("CPF");
+                .IsUnicode(false);
             entity.Property(e => e.Email)
-                .HasMaxLength(30)
+                .HasMaxLength(50)
                 .IsUnicode(false);
             entity.Property(e => e.ImagemId).HasColumnName("ImagemID");
             entity.Property(e => e.Nome)

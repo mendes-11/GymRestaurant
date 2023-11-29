@@ -16,27 +16,31 @@ public class UserService : IUserService
         this.ctx = ctx;
         this.security = security;
     }
+
     public async Task Create(UserData data)
     {
         Usuario usuario = new Usuario();
         var salt = await security.GenerateSalt();
 
-        usuario.Cpf = data.CPF;
+        usuario.Nome = data.CPF;
+        usuario.Email = data.Email;
         usuario.Senha = await security.HashPassword(
             data.Password, salt
         );
-        // usuario.IsAdm = data.isAdm;
+        usuario.Adm = data.isAdm;
         usuario.Salt = salt;
 
         this.ctx.Add(usuario);
         await this.ctx.SaveChangesAsync();
     }
+
     public async Task<Usuario> GetByLogin(string login)
     {
-        var query = 
+        var query =
             from u in this.ctx.Usuarios
-            where u.Cpf == login
+            where u.Nome == login
             select u;
+        
         return await query.FirstOrDefaultAsync();
     }
 }
