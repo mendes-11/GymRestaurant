@@ -9,25 +9,25 @@ Obs: 'Tem tela/Tem Interface' = Possui parte visual, mesmo sem funcionar.
 - [X] Possui tela de usuário normal das promoções.
 - [X] Possui tela para visualizar código da promoção.
 - [X] Possui tela de Administrador.
-- [ ] Possui tela de Pedidos.
+- [X] Possui tela de Pedidos.
 - [ ] Possui tela de Cadastro de Produtos.
-- [ ] Possui tela de Cadastro de Promoções.
+- [X] Possui tela de Cadastro de Promoções.
 - [ ] Possui tela do totem.
-- [ ] Possui tela dos gráficos.
+- [X] Possui tela dos gráficos.
 - [ ] Tela do totem tem interface para inserção de código da promoção.
 - [ ] Tela do totem tem interface para colocar itens na sacola.
 - [ ] Banco de dados criado com tabelas de Usuário, Pedido, ItemPedido, Produto, Promoção ou similar.
-- [ ] Rotas no Frontend Configuradas.
+- [X] Rotas no Frontend Configuradas.
 - [X] Projeto Backend C# criado.
-- [ ] CORS Configurado.
-- [ ] HttpClient configurado e podendo ser usado para fazer quests entre Back e Front.
-- [ ] Entity Framework Configurado no Backend e Model gerada.
-- [ ] Bilbioteca de JWT instalada.
-- [ ] Operação de cadastro realmente salva um usuário no banco de dados.
-- [ ] Cadastro tem algumas validações sendo mais robusto.
+- [X] CORS Configurado.
+- [X] HttpClient configurado e podendo ser usado para fazer quests entre Back e Front.
+- [X] Entity Framework Configurado no Backend e Model gerada.
+- [X] Bilbioteca de JWT instalada.
+- [X] Operação de cadastro realmente salva um usuário no banco de dados.
+- [X] Cadastro tem algumas validações sendo mais robusto.
 - [ ] Login realmente busca usuário no banco de dados.
-- [ ] Aplica salt na senha do usuário.
-- [ ] Aplica slow Hash na senha do usuário.
+- [X] Aplica salt na senha do usuário.
+- [X] Aplica slow Hash na senha do usuário.
 - [ ] Login retorna JWT para o frontend que o guarda no Sessin Storage.
 - [ ] Após o Login a página de usuário normal ou adm é mostrada corretamente.
 - [ ] Adm é capaz de ver produtos existentes.
