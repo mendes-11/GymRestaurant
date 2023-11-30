@@ -22,8 +22,9 @@ public class UserService : IUserService
         Usuario usuario = new Usuario();
         var salt = await security.GenerateSalt();
 
-        usuario.Nome = data.CPF;
+        usuario.Nome = data.Nome;
         usuario.Email = data.Email;
+        usuario.Cpf = data.CPF;
         usuario.Senha = await security.HashPassword(
             data.Password, salt
         );

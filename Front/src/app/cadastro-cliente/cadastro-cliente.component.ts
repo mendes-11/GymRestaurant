@@ -10,6 +10,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { NavComponent } from '../nav/nav.component';
+import { ClientServiceService } from '../client-service.service';
+import { ClientData } from '../client-data';
 
 @Component({
   selector: 'app-cadastro-cliente',
@@ -28,14 +30,49 @@ import { NavComponent } from '../nav/nav.component';
     MatInputModule, 
     MatCardModule,
     MatCheckboxModule,
+    
+
   ],
 })
 export class CadastroClienteComponent {
 
+  constructor (private service: ClientServiceService){} 
+
   hide = true;
   username = '';
-  password = '';
+  password: string = '';
   hide2 = true;
   password2 = '';
 
+  nome: string = '';
+  cpf: string = '';
+  email: string = '';
+
+  registrar(){
+    
+    if(this.cpf.length != 11)
+    {
+      alert("CPF tem que tem 11 caracteres");
+      return;
+    }
+
+    if(this.password != this.password2)
+    {
+      alert("senhas devem ser iguais!");
+      return;
+    }
+
+    let client: ClientData = {
+      Nome: this.nome,
+      Email: this.email,
+      CPF: this.cpf,
+      Password: this.password,
+      isAdm: false
+    }
+    console.log(client);
+    this.service.register(client);
+  }
+
 }
+
+

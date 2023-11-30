@@ -12,8 +12,7 @@ namespace Back.Controllers;
 
 using DTO;
 using Model;
-using Services;
-using System.IdentityModel.Tokens.Jwt;
+using Back.Services;
 using System.Security.Cryptography;
 using Trevisharp.Security.Jwt;
 
@@ -30,7 +29,7 @@ public class UserController : ControllerBase
         [FromServices]CryptoService crypto)
     {
         var loggedUser = await service
-            .GetByLogin(user.Login);
+            .GetByLogin(user.CPF);
         
         if (loggedUser == null)
             return Unauthorized("Usuário não existe.");
@@ -45,11 +44,11 @@ public class UserController : ControllerBase
         var jwt = crypto.GetToken(new {
             id = loggedUser.Id,
             photoId = loggedUser.ImagemId,
-            isAdm = loggedUser.IsAdm
+            isAdm = loggedUser.Adm
         });
 
 
-        return Ok(new { jwt, loggedUser.IsAdm, loggedUser.Nome });
+        return Ok(new { jwt, loggedUser.Adm, loggedUser.Nome });
     }
 
     [HttpPost("register")]
@@ -59,10 +58,11 @@ public class UserController : ControllerBase
         [FromServices]IUserService service)
     {
         var errors = new List<string>();
-        if (user is null || user.Login is null)
-            errors.Add("É necessário informar um login.");
-        if (user.Login.Length < 5)
-            errors.Add("O Login deve conter ao menos 5 caracteres.");
+        if (user is null || user.CPF is null)
+            errors.Add("É necessário informar um cpf.");
+            
+        if (user.CPF.Length > 11)
+            errors.Add("O cpf deve ter 11 caracteres");
 
         if (errors.Count > 0)
             return BadRequest(errors);

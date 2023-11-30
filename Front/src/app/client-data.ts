@@ -1,4 +1,8 @@
 export interface ClientData {
-    login: string;
-    password: string;
+    Nome: string;
+    Email: string;
+    CPF: string;
+    Password: string;
+    isAdm: boolean;
 }
+

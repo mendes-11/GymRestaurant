@@ -14,6 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddScoped<GymRestaurantContext>();
+builder.Services.AddSingleton<ISecurityService, SecurityService>();
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddSingleton<CryptoService>(p => new(){
     InternalKeySize = 24,
@@ -33,13 +34,6 @@ builder.Services.AddCors(options =>
 });
 
 
-
-
-
-
-builder.Services.AddScoped<GymRestaurantContext>();
-
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -52,6 +46,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
