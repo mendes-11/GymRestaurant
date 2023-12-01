@@ -10,8 +10,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { NavComponent } from '../nav/nav.component';
-import { ClientServiceService } from '../client-service.service';
-import { ClientData } from '../client-data';
+import { ClientServiceService } from '../Services/client-service.service';
+import { ClientData } from '../Model/client-data';
 
 @Component({
   selector: 'app-cadastro-cliente',
@@ -41,7 +41,6 @@ export class CadastroClienteComponent {
   hide = true;
   username = '';
   password: string = '';
-  hide2 = true;
   password2 = '';
 
   nome: string = '';

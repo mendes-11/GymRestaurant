@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ClientData } from './client-data';
+import { ClientData } from '../Model/client-data';
+import { ClientDataLogin } from '../Model/client-data-login';
 import { ApiClientService } from './api-client.service';
 
 @Injectable({
@@ -14,7 +15,7 @@ export class ClientServiceService {
       .subscribe(response => console.log(response))
   }
 
-  login(data: ClientData, callback: any)
+  login(data: ClientDataLogin, callback: any)
   {
     this.http.post('user/login', data)
       .subscribe(

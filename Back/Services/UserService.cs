@@ -35,11 +35,11 @@ public class UserService : IUserService
         await this.ctx.SaveChangesAsync();
     }
 
-    public async Task<Usuario> GetByLogin(string login)
+    public async Task<Usuario> GetByLogin(string cpf)
     {
         var query =
             from u in this.ctx.Usuarios
-            where u.Nome == login
+            where u.Cpf == cpf
             select u;
         
         return await query.FirstOrDefaultAsync();

@@ -52,14 +52,14 @@
         <mat-form-field class="example-full-width">
           <mat-label>Confimar Senha</mat-label>
           <input
-            [type]="hide2 ? 'password' : 'text'"
+            [type]="hide ? 'password' : 'text'"
             matInput
             placeholder="Ex. Senha123"
             name="senha2"
             [(ngModel)]="password2"
           />
-          <mat-icon matSuffix (click)="hide2 = !hide2">{{
-            hide2 ? "visibility_off" : "visibility"
+          <mat-icon matSuffix (click)="hide = !hide">{{
+            hide ? "visibility_off" : "visibility"
           }}</mat-icon>
         </mat-form-field>
       </form>

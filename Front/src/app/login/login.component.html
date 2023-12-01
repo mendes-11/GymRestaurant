@@ -7,7 +7,7 @@
       <form class="form">
         <mat-form-field class="example-full-width">
           <mat-label>Login</mat-label>
-          <input matInput placeholder="Ex. Usuario123" name="login" />
+          <input matInput placeholder="Ex. Usuario123" [(ngModel)]="cpf" name="login" />
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
@@ -26,7 +26,7 @@
       </form>
       <section>
         <div class="button">
-          <button class="toggle-button" onclick="">Login</button>
+          <button class="toggle-button" (click)="logar()">Login</button>
         </div>
         <div class="button">
           <button class="toggle-button" onclick="">Cadastrar</button>
