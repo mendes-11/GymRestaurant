@@ -15,67 +15,40 @@ using Model;
 using Back.Services;
 using System.Security.Cryptography;
 using Trevisharp.Security.Jwt;
+using System.ComponentModel;
 
 [ApiController]
-[Route("user")]
-public class UserController : ControllerBase
+[Route("product")]
+public class ProductController : ControllerBase
 {
-    [HttpPost("login")]
-    [EnableCors("DefaultPolicy")]
-    public async Task<IActionResult> Login(
-        [FromBody]UserDataLogin user,
-        [FromServices]IUserService service,
-        [FromServices]ISecurityService security,
-        [FromServices]CryptoService crypto)
-    {
-
-        var loggedUser = await service
-            .GetByLogin(user.CPF);
-
-        if (loggedUser == null)
-            return Unauthorized("Usuário não existe.");
-        
-
-        var password = await security.HashPassword(
-            user.Password, loggedUser.Salt
-        );
-        var realPassword = loggedUser.Senha;
-
-        if (password != realPassword)
-            return Unauthorized("Senha incorreta.");
-        
-
-        var jwt = crypto.GetToken(new {
-            id = loggedUser.Id,
-            photoId = loggedUser.ImagemId,
-            isAdm = loggedUser.Adm
-        });
-
-        return Ok(new { jwt, loggedUser.Adm, loggedUser.Nome });
-    }
-
     [HttpPost("register")]
     [EnableCors("DefaultPolicy")]
     public async Task<IActionResult> Create(
-        [FromBody]UserData user,
-        [FromServices]IUserService service)
+        [FromBody]ProductData product,
+        [FromServices]IProductService service)
     {
         var errors = new List<string>();
-        if (user is null || user.CPF is null)
-            errors.Add("É necessário informar um cpf.");
-            
-        if (user.CPF.Length > 11)
-            errors.Add("O cpf deve ter 11 caracteres");
-
-        if (await service.GetByLogin(user.CPF) != null)
-            errors.Add("O CPF já está cadastrado.");
-       
+        if (product is null)
+            errors.Add("É necessário informar um Nome.");
 
         if (errors.Count > 0)
             return BadRequest(errors);
 
-        await service.Create(user);
+        await service.Create(product);
         return Ok();
+    }
+
+    [HttpGet("")]
+    [EnableCors("DefaultPolicy")]
+    public async Task<IActionResult> Get(
+        [FromServices]IProductService service)
+    {
+        var a = await service.Get();
+        var errors = new List<string>();
+        if (errors.Count > 0)
+            return BadRequest(errors);
+
+        return Ok(new {a});
     }
 
     [HttpDelete]
