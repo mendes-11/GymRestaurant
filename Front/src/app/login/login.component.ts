@@ -48,16 +48,22 @@ export class LoginComponent {
     this.service.login(
       {
         CPF: this.cpf,
-        Password: this.password
+        Password: this.password,
+        Adm: false
       },
       (result: any): void => {
         console.log(result);
         if (result == null) {
           alert("Null!")
-        } else {
-          sessionStorage.setItem('jwt', JSON.stringify(result));
-          this.router.navigate(['/home']);
         }
+        else {
+          sessionStorage.setItem('jwt', JSON.stringify(result));
+        }
+        console.log(result);
+        if(result.adm)
+          this.router.navigate(['/adm']);
+        else
+          this.router.navigate(['/cardapio']);
       }
     );
   }

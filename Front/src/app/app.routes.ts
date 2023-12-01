@@ -11,9 +11,9 @@ import { TotemComponent } from './totem/totem.component';
 
 export const routes: Routes = [
     { path: '', component: LoginComponent },
-    { path: 'home', component: ClienteComponent },
-    { path: 'promocao', component: PromocaoComponent },
     { path: 'cadastro', component: CadastroClienteComponent },
+    { path: 'cardapio', component: ClienteComponent },
+    { path: 'promocao', component: PromocaoComponent },
     { path: 'cupom', component: CuponsComponent },
     { path: 'adm', component: AdmComponent },
     { path: 'totem', component: TotemComponent },
