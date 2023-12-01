@@ -61,5 +61,7 @@ export class LoginComponent {
       }
     );
   }
-
+  goToCadastro(){
+    this.router.navigate(['/cadastro']);
+  }
 }

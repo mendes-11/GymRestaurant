@@ -35,12 +35,10 @@ public class UserController : ControllerBase
         if (loggedUser == null)
             return Unauthorized("Usuário não existe.");
         
-        Console.WriteLine("pros");
         var password = await security.HashPassword(
             user.Password, loggedUser.Salt
         );
         var realPassword = loggedUser.Senha;
-        Console.WriteLine("password !=");
 
         if (password != realPassword)
             return Unauthorized("Senha incorreta.");

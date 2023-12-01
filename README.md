@@ -3,7 +3,7 @@
 Obs: 'Tem tela/Tem Interface' = Possui parte visual, mesmo sem funcionar.
 
 - [X] Repositório GIT criado.
-- [X] Porjeto do Frontend Angular Criado.
+- [X] Projeto do Frontend Angular Criado.
 - [X] Possui tela de Login.
 - [X] Possui tela de cadastro.
 - [X] Possui tela de usuário normal das promoções.
@@ -11,12 +11,12 @@ Obs: 'Tem tela/Tem Interface' = Possui parte visual, mesmo sem funcionar.
 - [X] Possui tela de Administrador.
 - [X] Possui tela de Pedidos.
 - [ ] Possui tela de Cadastro de Produtos.
-- [X] Possui tela de Cadastro de Promoções.
+- [ ] Possui tela de Cadastro de Promoções.
 - [ ] Possui tela do totem.
-- [X] Possui tela dos gráficos.
+- [ ] Possui tela dos gráficos.
 - [ ] Tela do totem tem interface para inserção de código da promoção.
 - [ ] Tela do totem tem interface para colocar itens na sacola.
-- [ ] Banco de dados criado com tabelas de Usuário, Pedido, ItemPedido, Produto, Promoção ou similar.
+- [X] Banco de dados criado com tabelas de Usuário, Pedido, ItemPedido, Produto, Promoção ou similar.
 - [X] Rotas no Frontend Configuradas.
 - [X] Projeto Backend C# criado.
 - [X] CORS Configurado.
@@ -25,10 +25,10 @@ Obs: 'Tem tela/Tem Interface' = Possui parte visual, mesmo sem funcionar.
 - [X] Bilbioteca de JWT instalada.
 - [X] Operação de cadastro realmente salva um usuário no banco de dados.
 - [X] Cadastro tem algumas validações sendo mais robusto.
-- [ ] Login realmente busca usuário no banco de dados.
+- [X] Login realmente busca usuário no banco de dados.
 - [X] Aplica salt na senha do usuário.
 - [X] Aplica slow Hash na senha do usuário.
-- [ ] Login retorna JWT para o frontend que o guarda no Sessin Storage.
+- [X] Login retorna JWT para o frontend que o guarda no Sessin Storage.
 - [ ] Após o Login a página de usuário normal ou adm é mostrada corretamente.
 - [ ] Adm é capaz de ver produtos existentes.
 - [ ] Adm é capaz de cadastrar novos produtos.

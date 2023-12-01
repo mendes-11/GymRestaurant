@@ -21,5 +21,9 @@ public partial class Usuario
 
     public int? ImagemId { get; set; }
 
+    public virtual ICollection<Cupom> Cupoms { get; } = new List<Cupom>();
+
     public virtual Imagem? Imagem { get; set; }
+
+    public virtual ICollection<Pedido> Pedidos { get; } = new List<Pedido>();
 }

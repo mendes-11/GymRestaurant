@@ -62,13 +62,22 @@
             hide ? "visibility_off" : "visibility"
           }}</mat-icon>
         </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>ADM</mat-label>
+          <input
+            matInput
+            name="adm"
+            [(ngModel)]="adm"
+          />
+        </mat-form-field>
       </form>
       <section>
         <div class="button">
           <button class="toggle-button" (click)="registrar()">Cadastrar</button>
         </div>
         <div class="button">
-          <button class="toggle-button" onclick="">Voltar</button>
+          <button class="toggle-button" (click)="goToLogin()">Voltar</button>
         </div>
       </section>
     </mat-card>
