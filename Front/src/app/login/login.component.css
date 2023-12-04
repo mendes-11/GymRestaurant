@@ -1,5 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter&family=Fjalla+One&display=swap');
 
+.navbar {
+  background-color: #F8F4E3;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
+.navbar span, .navbar p {
+  margin-right: 20px; 
+}
+
+.toolbar-content {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  align-items: center;
+  padding: 0px;
+}
+
+.admin-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.adm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+
+}
 
 
 .centralizar{

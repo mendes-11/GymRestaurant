@@ -11,9 +11,9 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { NavComponent } from '../nav/nav.component';
 import { ClientServiceService } from '../Services/client-service.service';
 import { ClientDataLogin } from '../Model/client-data-login';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-login',
@@ -31,7 +31,7 @@ import { ClientDataLogin } from '../Model/client-data-login';
           MatInputModule, 
           MatCardModule,
           MatCheckboxModule,
-          NavComponent,
+          MatToolbarModule
         ],
 })
 export class LoginComponent {

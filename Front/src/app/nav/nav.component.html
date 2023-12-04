@@ -1,16 +1,60 @@
-<mat-toolbar class="navbar">
-    <div class="toolbar-content">
-      <span>Gym Restaurant</span>
-      <ng-container *ngIf="isAdmPage">
-        <div class="admin-items">
-          <!-- <span class="adm">Gerenciamento</span> -->
-          <span class="adm">Totem</span>
-          <span class="adm">Pedidos</span>
-        </div>
-        <div class="logout">
-            <span >Sair</span>
-        </div>
-      </ng-container>
+<div id="meuModal" class="modal" style="display: none">
+  <div class="modal-content">
+    <p class="title">Cadastro de produto</p>
+    <form class="form">
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Ex. nome" [(ngModel)]="name" name="nome" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Descrição</mat-label>
+        <input matInput placeholder="Ex. descrição" [(ngModel)]="descricao" name="descricao" />
+      </mat-form-field>
+
+      
+      <mat-form-field class="example-full-width">
+        <mat-label>Codigo do Produto</mat-label>
+        <input matInput placeholder="Ex. Codigo" [(ngModel)]="codProduto" name="codProduto" />
+      </mat-form-field>
+
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Preço</mat-label>
+        <input matInput placeholder="Ex. Preço" [(ngModel)]="valor" name="valor" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Promoção</mat-label>
+        <input matInput placeholder="Ex. Preço" [(ngModel)]="promo" name="valor" />
+      </mat-form-field>
+
+
+    </form>
+    <div class="button">
+      <button class="toggle-button" (click)="cadastrar()">Cadastrar</button>
     </div>
-  </mat-toolbar>
-  
+    <div class="button">
+      <button class="toggle-button" (click)="fecharModal()">Fechar</button>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+<mat-toolbar class="navbar">
+  <div class="toolbar-content">
+    <span>Gym Restaurant</span>
+    <ng-container *ngIf="isAdmPage">
+      <div class="admin-items">
+        <span class="adm">Totem</span>
+        <span class="adm">Pedidos</span>
+        <span class="adm" (click)="abrirModal()">Cadastrar</span>
+      </div>
+    </ng-container>
+  </div>
+</mat-toolbar>
