@@ -60,10 +60,16 @@ export class CadastroClienteComponent {
 
     if(this.password != this.password2)
     {
-      alert("senhas devem ser iguais!");
+      alert("Senhas devem ser iguais!");
       return;
     }
-    console.log(this.adm);
+    
+    if(this.password.length < 6)
+    {
+      alert("A senha tem que possuir mais de 6 caracteres!");
+      return;
+    }
+
     if(this.adm.length == 4 && this.adm == "0000")
     {
       this.IsAdm = true;

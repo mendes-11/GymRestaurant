@@ -33,8 +33,8 @@ export class NavComponent {
   name = '';
   descricao = '';
   codProduto = '';
-  valor = '';
-  promo = '';
+  valor = 0;
+  promo = 0;
 
 
   get isAdmPage(): boolean {
@@ -61,15 +61,10 @@ export class NavComponent {
       ValorPromocional: this.promo,
       
     }
-    console.log(this.name);
-    console.log(this.descricao);
-    console.log(this.codProduto);
-    console.log(this.valor);
-    console.log(this.promo);
+    console.log(produto)
 
     this.service.register(produto);
     alert("Cadastrado..")
 
   }
-
 }

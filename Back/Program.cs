@@ -14,13 +14,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddScoped<GymRestaurantContext>();
-builder.Services.AddSingleton<ISecurityService, SecurityService>();
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddSingleton<CryptoService>(p => new(){
     InternalKeySize = 24,
     UpdatePeriod = TimeSpan.FromDays(1)
 });
 builder.Services.AddSingleton<ISecurityService, SecurityService>();
+builder.Services.AddTransient<IProductService, ProductService>();
+
 
 builder.Services.AddCors(options =>
 {

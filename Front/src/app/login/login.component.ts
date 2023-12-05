@@ -32,6 +32,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
           MatCardModule,
           MatCheckboxModule,
           MatToolbarModule
+        
         ],
 })
 export class LoginComponent {

@@ -2,6 +2,6 @@ export interface ProductData{
     Nome: String;
     Descricao: String;
     CodProduto: String;
-    Valor: String;
-    ValorPromocional: String;
+    Valor: number;
+    ValorPromocional: number;
 }

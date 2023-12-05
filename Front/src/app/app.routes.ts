@@ -6,6 +6,7 @@ import { CadastroClienteComponent } from './cadastro-cliente/cadastro-cliente.co
 import { CuponsComponent } from './cupons/cupons.component';
 import { AdmComponent } from './adm/adm.component';
 import { TotemComponent } from './totem/totem.component';
+import { UserGuard } from './guard/user.guard';
 
 
 
@@ -15,7 +16,7 @@ export const routes: Routes = [
     { path: 'cardapio', component: ClienteComponent },
     { path: 'promocao', component: PromocaoComponent },
     { path: 'cupom', component: CuponsComponent },
-    { path: 'adm', component: AdmComponent },
+    { path: 'adm', component: AdmComponent, canActivate: [UserGuard] },
     { path: 'totem', component: TotemComponent },
 ];
 
