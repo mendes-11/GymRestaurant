@@ -3,7 +3,7 @@
   <div class="card-body">
     <h5 class="card-title">{{ food.name }}</h5>
     <p class="card-text">{{ food.description }}</p>
-    <p class="card-text">Preço: R$ {{ food.price.toFixed(2) }}</p>
+    <p class="card-text">Preço: R$ {{ food.price?.toFixed(2) }}</p>
     <button class="btn btn-primary" (click)="buyClicked()">Comprar</button>
   </div>
 </div>

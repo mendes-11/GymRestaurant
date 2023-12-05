@@ -1,1 +1,14 @@
 <app-nav></app-nav>
+
+
+  
+    <div class="cards-body">
+      <div class="cards-container">
+        <div *ngFor="let food of menuItems" class="card-wrapper">
+          <app-food-card
+            [food]="food"
+            (buyClickedEvent)="buyFood(food)"
+          ></app-food-card>
+        </div>
+      </div>
+    </div>

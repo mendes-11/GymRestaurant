@@ -49,6 +49,7 @@ public class ProductController : ControllerBase
         if (errors.Count > 0)
             return BadRequest(errors);
 
+        System.Console.WriteLine("AQUI");
         return Ok(new { a });
     }
 
