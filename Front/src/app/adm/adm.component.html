@@ -1,14 +1,19 @@
 <app-nav></app-nav>
-
-
-  
-    <div class="cards-body">
-      <div class="cards-container">
-        <div *ngFor="let food of menuItems" class="card-wrapper">
-          <app-food-card
-            [food]="food"
-            (buyClickedEvent)="buyFood(food)"
-          ></app-food-card>
+<div class="cards-body">
+  <div class="cards-container">
+    <div *ngFor="let food of menuItems" class="card-wrapper">
+      <div class="card">
+        <img [src]="food.imageUrl" alt="{{ food.n }}" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ food.nome }}</h5>
+          <p class="card-text">{{ food.descricao }}</p>
+          <p class="card-text">{{ food.codProduto }}</p>
+          <p class="card-text">Preço: R$ {{ food.valor?.toFixed(2) }}</p>
+          <button class="btn btn-primary" (click)="buyClicked()">
+            Comprar
+          </button>
         </div>
       </div>
     </div>
+  </div>
+</div>

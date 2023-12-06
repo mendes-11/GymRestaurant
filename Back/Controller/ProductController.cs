@@ -46,10 +46,10 @@ public class ProductController : ControllerBase
     {
         var a = await service.Get();
         var errors = new List<string>();
+
         if (errors.Count > 0)
             return BadRequest(errors);
-
-        System.Console.WriteLine("AQUI");
+            
         return Ok(new { a });
     }
 

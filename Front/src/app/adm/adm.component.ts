@@ -27,22 +27,26 @@ import { ApiProductService } from '../Services/api-product.service';
 })
 export class AdmComponent {
 
-  menuItems: any[] = [];
+  menuItems: any;
 
   constructor(private service: ApiProductService) { }
 
   ngOnInit(): void {
-    this.service.getAll().subscribe(data => {
-      this.menuItems = data.map(item => ({
-        name: item.name,
-        description: item.description,
-        price: item.Valor,
-      }));
-      console.log("Itens do menu com preço:", this.menuItems.map(item => item.description));
+    // this.service.getAll().subscribe(data => {
+    //   this.menuItems = data.map(item => ({
+    //     name: item.name,
+    //     description: item.description,
+    //     price: item.Valor,
+    //   }));
+    //   console.log("Itens do menu com preço:", this.menuItems);
 
-    }, error => {
-      console.error("Erro ao receber dados:", error);
-    });
+    // }, error => {
+    //   console.error("Erro ao receber dados:", error);
+    // });
+    
+    let a = this.service.getAll().subscribe({
+      next: (res) => { this.menuItems = res; console.log(this.menuItems) }
+    })
   }
   
 
@@ -51,6 +55,11 @@ export class AdmComponent {
 
   buyFood(food: any) {
     console.log(`Você comprou: ${food.nome}`);
+  } 
+  
+  buyClicked()
+  {
+
   }
 
 
