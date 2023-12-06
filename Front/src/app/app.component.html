@@ -1,1 +1,49 @@
-<router-outlet></router-outlet>
+<!-- <div class="totem-container">
+    <h1>Escolha Seu Pedido</h1>
+    
+    <div *ngFor="let food of promocao" class="card-wrapper">
+    <div class="product-list">
+      <div class="product">
+        <img [src]="imageUrl" alt="{{ food.nome }}" class="card-img-top" />
+        <div class="product-info">
+          <h3>{{ food.nome }}</h3>
+          <s>De: R$ {{ food.valor?.toFixed(2) }}</s>
+          <h3>Para: R$ {{ food.valorPromocional?.toFixed(2) }}</h3>
+          <h4>Código: {{ food.codProduto }}</h4>
+        </div>
+        <button class="add-to-cart">Adicionar</button>
+      </div>
+    </div>
+    </div>
+    
+    <div class="coupon-container">
+      <input type="text" class="coupon-input" placeholder="Cupom de Desconto">
+      <button class="apply-coupon">Aplicar</button>
+    </div>
+    
+    <div class="checkout">
+      <button class="add-to-cart" style="width: 100%;">Finalizar Pedido</button>
+    </div>
+  </div> -->
+
+
+  <div class="totem-container">
+    <div class="header">
+      <h1>Main Menu</h1>
+    </div>
+  
+    <div class="product-grid">
+    <div *ngFor="let food of promocao" class="card-wrapper">
+      <div class="product">
+        <img [src]="imageUrl" alt="{{ food.nome }}" class="card-img-top" />
+        <div class="product-name">Product 1</div>
+        <div class="product-price"><s>De: R$ {{ food.valor?.toFixed(2) }}</s></div>
+        <div class="product-price">Para: R$ {{ food.valorPromocional?.toFixed(2) }}</div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="checkout-area">
+      <input type="text" placeholder="Coupon Code" class="coupon-code">
+      <button class="apply-coupon-btn">Apply</button>
+    </div>
