@@ -21,7 +21,7 @@ using System.ComponentModel;
 [Route("product")]
 public class ProductController : ControllerBase
 {
-    [HttpPost("register")]
+ [HttpPost("register")]
     [EnableCors("DefaultPolicy")]
     public async Task<IActionResult> Create(
         [FromBody] ProductData product,
@@ -49,7 +49,7 @@ public class ProductController : ControllerBase
 
         if (errors.Count > 0)
             return BadRequest(errors);
-            
+
         return Ok(new { a });
     }
 

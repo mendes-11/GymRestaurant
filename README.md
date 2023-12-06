@@ -9,7 +9,7 @@ Obs: 'Tem tela/Tem Interface' = Possui parte visual, mesmo sem funcionar.
 - [X] Possui tela de usuário normal das promoções.
 - [X] Possui tela para visualizar código da promoção.
 - [X] Possui tela de Administrador.
-- [ ] Possui tela de Pedidos.
+- [X] Possui tela de Pedidos.
 - [X] Possui tela de Cadastro de Produtos.
 - [X] Possui tela de Cadastro de Promoções.
 - [ ] Possui tela do totem.
@@ -32,7 +32,7 @@ Obs: 'Tem tela/Tem Interface' = Possui parte visual, mesmo sem funcionar.
 - [X] Após o Login a página de usuário normal ou adm é mostrada corretamente.
 - [X] Adm é capaz de ver produtos existentes.
 - [X] Adm é capaz de cadastrar novos produtos.
-- [ ] Adm é capaz de ver promoções existentes.
+- [X] Adm é capaz de ver promoções existentes.
 - [X] Adm é capaz de criar novas promoções.
 - [ ] Adm é capaz de ver Dashboard com dois gráficos de informações.
 - [ ] Gráficos do Dashboard realmente refletem os dados no banco.

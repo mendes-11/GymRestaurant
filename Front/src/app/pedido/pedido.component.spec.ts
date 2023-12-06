@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdmComponent } from './adm.component';
+import { PedidoComponent } from './pedido.component';
 
-describe('AdmComponent', () => {
-  let component: AdmComponent;
-  let fixture: ComponentFixture<AdmComponent>;
+describe('PedidoComponent', () => {
+  let component: PedidoComponent;
+  let fixture: ComponentFixture<PedidoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AdmComponent]
+      imports: [PedidoComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(AdmComponent);
+    fixture = TestBed.createComponent(PedidoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -21,4 +21,3 @@ describe('AdmComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-

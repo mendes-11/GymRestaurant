@@ -41,3 +41,20 @@
         margin: 5px; 
     }
 }
+
+
+.card {
+    width: 18rem;
+    margin-bottom: 20px;
+    font-family: 'Bitter', serif;
+    font-family: 'Fjalla One', sans-serif;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .card-title{
+    font-family: 'Bitter', serif;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+  }

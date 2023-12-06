@@ -7,6 +7,7 @@ import { CuponsComponent } from './cupons/cupons.component';
 import { AdmComponent } from './adm/adm.component';
 import { TotemComponent } from './totem/totem.component';
 import { UserGuard } from './guard/user.guard';
+import { PedidoComponent } from './pedido/pedido.component';
 
 
 
@@ -18,6 +19,7 @@ export const routes: Routes = [
     { path: 'cupom', component: CuponsComponent },
     { path: 'adm', component: AdmComponent, canActivate: [UserGuard] },
     { path: 'totem', component: TotemComponent },
+    { path: 'pedido', component: PedidoComponent },
 ];
 
 

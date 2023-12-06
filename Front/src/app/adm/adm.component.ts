@@ -28,39 +28,31 @@ import { ApiProductService } from '../Services/api-product.service';
 export class AdmComponent {
 
   menuItems: any;
-
+  promocao: any;
+  imageUrl = "../assets/tapioca.jpeg";
+ 
   constructor(private service: ApiProductService) { }
 
   ngOnInit(): void {
-    // this.service.getAll().subscribe(data => {
-    //   this.menuItems = data.map(item => ({
-    //     name: item.name,
-    //     description: item.description,
-    //     price: item.Valor,
-    //   }));
-    //   console.log("Itens do menu com preço:", this.menuItems);
-
-    // }, error => {
-    //   console.error("Erro ao receber dados:", error);
-    // });
-    
-    let a = this.service.getAll().subscribe({
-      next: (res) => { this.menuItems = res; console.log(this.menuItems) }
-    })
+    this.service.getAll().subscribe({
+      next: (res) => { 
+        console.log('Dados recebidos:', res); 
+        this.menuItems = res;
+        this.promocao = res.filter(item => item.valorPromocional > 0 && item.valorPromocional < item.valor);
+        console.log('Dados recebidos:', this.menuItems); 
+        console.log('Dados recebidos:', this.promocao); 
+        },
+      error: (err) => {
+        console.error('Erro ao buscar itens:', err);
+      }
+    });
   }
-  
-
-
 
 
   buyFood(food: any) {
     console.log(`Você comprou: ${food.nome}`);
   } 
   
-  buyClicked()
-  {
-
-  }
 
 
 }

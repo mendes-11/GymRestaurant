@@ -1,3 +1,6 @@
+.backgroundCarousel{
+    background: linear-gradient(180deg, rgba(180,176,159,1) 0%, rgba(212,205,195,1) 100%);
+}
 .cards-body {
     display: flex;
     justify-content: center;
@@ -28,7 +31,7 @@
     margin: 10px;
 }
 
-@media screen and (max-width: 960px) {
+/* @media screen and (max-width: 960px) {
     .cards-container {
         justify-content: center; 
     }
@@ -37,4 +40,31 @@
         flex-basis: 46%;
         margin: 5px; 
     }
-}
+} */
+
+
+.card {
+    width: 18rem;
+    margin-bottom: 20px;
+    font-family: 'Bitter', serif;
+    font-family: 'Fjalla One', sans-serif;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .card-title{
+    font-family: 'Bitter', serif;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+  }
+  
+  .title{
+    font-family: 'Bitter', serif;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }

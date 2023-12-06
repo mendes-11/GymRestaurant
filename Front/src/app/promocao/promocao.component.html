@@ -1,14 +1,21 @@
 <div class="body">
   <app-nav-bar></app-nav-bar>
 
+  <p class="title">Promoções</p>
   <div class="cards-body">
     <div class="cards-container">
       <div *ngFor="let food of promocao" class="card-wrapper">
-        <app-food-card
-          [food]="food"
-          (buyClickedEvent)="buyFood(food)"
-        ></app-food-card>
+        <div class="card">
+          <img [src]="imageUrl" alt="{{ food.nome }}" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">{{ food.nome }}</h5>
+            <p class="card-text">{{ food.descricao }}</p>
+            <s class="card-text">De: R$ {{ food.valor?.toFixed(2) }}</s>
+            <p class="card-text">Para: R$ {{ food.valorPromocional?.toFixed(2) }}</p>
+            <p class="card-text">Código: {{ food.codProduto }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  

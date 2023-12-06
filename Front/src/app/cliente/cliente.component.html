@@ -4,13 +4,30 @@
     <app-carousel></app-carousel>
   </div>
 
-  <div class="cards-body">
+  <!-- <div class="cards-body">
     <div class="cards-container">
       <div *ngFor="let food of menuItems" class="card-wrapper">
         <app-food-card
           [food]="food"
           (buyClickedEvent)="buyFood(food)"
         ></app-food-card>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="cards-body">
+  <div class="cards-container">
+    <div *ngFor="let food of menuItems" class="card-wrapper">
+      <div class="card">
+        <img [src]="imageUrl" alt="{{ food.n }}" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ food.nome }}</h5>
+          <p class="card-text">{{ food.descricao }}</p>
+          <p class="card-text">R$ {{ food.valor?.toFixed(2) }}</p>
+          <p class="card-text">Codigo: {{ food.codProduto }}</p>
+        </div>
       </div>
     </div>
   </div>

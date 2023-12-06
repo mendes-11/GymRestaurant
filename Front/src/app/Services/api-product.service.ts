@@ -13,15 +13,12 @@ export class ApiProductService {
     this.http.post('product/register', data)
       .subscribe(response => console.log(response))
   }
-  // getAll(): Observable<any[]> {
-  //   return this.http.get('product').pipe(
-  //     map((response: any) => response.a)
-  //   );
-  // }
 
   getAll(): Observable<any[]> {
     return this.http.get('product').pipe(
       map((response: any) => response.a)
     )
   }
+
+
 }
