@@ -8,6 +8,8 @@ import { AdmComponent } from './adm/adm.component';
 import { TotemComponent } from './totem/totem.component';
 import { UserGuard } from './guard/user.guard';
 import { PedidoComponent } from './pedido/pedido.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -20,6 +22,8 @@ export const routes: Routes = [
     { path: 'adm', component: AdmComponent, canActivate: [UserGuard] },
     { path: 'totem', component: TotemComponent },
     { path: 'pedido', component: PedidoComponent },
+    { path: 'carrinho', component: CarrinhoComponent },
+    { path: 'dashboard', component: DashboardComponent },
 ];
 
 

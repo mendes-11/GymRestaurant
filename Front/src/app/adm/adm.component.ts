@@ -7,6 +7,7 @@ import { FoodCardComponent } from '../food-card/food-card.component';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { ApiProductService } from '../Services/api-product.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -31,7 +32,7 @@ export class AdmComponent {
   promocao: any;
   imageUrl = "../assets/tapioca.jpeg";
  
-  constructor(private service: ApiProductService) { }
+  constructor(private service: ApiProductService, private router: Router) { }
 
   ngOnInit(): void {
     this.service.getAll().subscribe({
@@ -47,6 +48,7 @@ export class AdmComponent {
       }
     });
   }
+
 
 
   buyFood(food: any) {

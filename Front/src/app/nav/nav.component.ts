@@ -67,4 +67,11 @@ export class NavComponent {
     alert("Cadastrado..")
 
   }
+ 
+  goToTotem(){
+    this.router.navigate(['totem']);
+  }
+  goToPedido(){
+    this.router.navigate(['pedido']);
+  }
 }

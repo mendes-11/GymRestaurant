@@ -1,58 +1,54 @@
-<div class="body">
-    <app-nav></app-nav>
-
-    <div class="card">
-      <img src="../../assets/panqueca.jpg" alt="Avatar" style="width:100%">
-      <div class="container">
-        <h4><b>John Doe</b></h4>
-        <p>Architect & Engineer</p>
+<div class="totem-container">
+    <h1>Escolha Seu Pedido</h1>
+    
+    <!-- <div *ngFor="let food of promocao" class="card-wrapper">
+    <div class="product-list">
+      <div class="product">
+        <img [src]="imageUrl" alt="{{ food.nome }}" class="card-img-top" />
+        <div class="product-info">
+          <h3>{{ food.nome }}</h3>
+          <s>De: R$ {{ food.valor?.toFixed(2) }}</s>
+          <h3>Para: R$ {{ food.valorPromocional?.toFixed(2) }}</h3>
+          <h4>Código: {{ food.codProduto }}</h4>
+        </div>
+        <button class="add-to-cart">Adicionar</button>
       </div>
     </div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <div class="centralizar">
-      <mat-card class="card">
-        <p class="title">Pedido</p>
-  
-        <form class="form">
-          <mat-form-field class="example-full-width">
-            <mat-label>Codigo</mat-label>
-            <input matInput placeholder="Ex. 123" name="codigo" />
-          </mat-form-field>
-          <mat-form-field class="example-full-width">
-            <mat-label>Cupom</mat-label>
-            <input matInput placeholder="Ex. GYN10" name="cupom" />
-          </mat-form-field>
-          
-  
-        </form>
-        <section>
-          <div class="button">
-            <button class="toggle-button" onclick="">Finalizar</button>
-          </div>
-          <div class="button">
-            <button class="toggle-button" onclick="">Lanches</button>
-          </div>
-        </section>
-      </mat-card>
     </div> -->
+    <!-- <div class="header">
+      <h1>Promoções</h1>
+    </div> -->
+
+    
+    <div class="product-grid">
+    <div *ngFor="let food of menuItems" class="card-wrapper">
+      <div class="product">
+        <img [src]="imageUrl" alt="{{ food.nome }}" class="card-img-top" />
+        <div class="product-name">{{ food.nome }}</div>
+        <div class="product-price"><s>De: R$ {{ food.valor?.toFixed(2) }}</s></div>
+        <div class="product-price">Código: {{ food.codProduto }}</div>
+        <!-- <button class="add-to-cart-btn">Add to Cart</button> -->
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <div class="coupon-container">
+    <input type="text" placeholder="Código do produto" class="coupon-code"  [(ngModel)]="cod">
+    <button class="apply-coupon-btn">Adicionar ao carrinho</button>
+  </div>
+  <br>
+    
+    <div class="coupon-container">
+      <input type="text" placeholder="Cupom" class="coupon-code"  [(ngModel)]="cupom">
+      <button class="apply-coupon-btn">Aplicar</button>
+    </div>
+  <br>
+    
+    <div class="checkout">
+      <button class="add-to-cart" style="width: 100%;">Finalizar Pedido</button>
+    </div>
+  </div>

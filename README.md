@@ -13,9 +13,9 @@ Obs: 'Tem tela/Tem Interface' = Possui parte visual, mesmo sem funcionar.
 - [X] Possui tela de Cadastro de Produtos.
 - [X] Possui tela de Cadastro de Promoções.
 - [X] Possui tela do totem.
-- [ ] Possui tela dos gráficos.
-- [ ] Tela do totem tem interface para inserção de código da promoção.
-- [ ] Tela do totem tem interface para colocar itens na sacola.
+- [X] Possui tela dos gráficos.
+- [X] Tela do totem tem interface para inserção de código da promoção.
+- [X] Tela do totem tem interface para colocar itens na sacola.
 - [X] Banco de dados criado com tabelas de Usuário, Pedido, ItemPedido, Produto, Promoção ou similar.
 - [X] Rotas no Frontend Configuradas.
 - [X] Projeto Backend C# criado.
@@ -34,9 +34,9 @@ Obs: 'Tem tela/Tem Interface' = Possui parte visual, mesmo sem funcionar.
 - [X] Adm é capaz de cadastrar novos produtos.
 - [X] Adm é capaz de ver promoções existentes.
 - [X] Adm é capaz de criar novas promoções.
-- [ ] Adm é capaz de ver Dashboard com dois gráficos de informações.
+- [X] Adm é capaz de ver Dashboard com dois gráficos de informações.
 - [ ] Gráficos do Dashboard realmente refletem os dados no banco.
-- [ ] É possível ver produtos existentes no Totem.
+- [X] É possível ver produtos existentes no Totem.
 - [ ] É possível adicionar itens em uma sacola.
 - [ ] Ao finalizar a compra o pedido é realmente registrado no banco de dados.
 - [ ] É possível ver o custo total do pedido.
@@ -45,6 +45,6 @@ Obs: 'Tem tela/Tem Interface' = Possui parte visual, mesmo sem funcionar.
 - [ ] Pedidos podem ser vistos na tela de pedidos.
 - [ ] É possível editar um pedido como 'Entregue' de alguma forma.
 - [ ] Apenas os pedidos corretos aparecem na tela de pedidos (finalizados, porém não entregues).
-- [ ] Usuário é capaz de ver as promoções no sistema.
+- [X] Usuário é capaz de ver as promoções no sistema.
 - [ ] Usuário é capaz de gerar um código de promoção válido.
 - [ ] Sistema realmente válida código de promoção.
